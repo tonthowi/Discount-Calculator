@@ -12,7 +12,7 @@ document.getElementById("submitBtn").addEventListener("click", function(){
         document.getElementById('hasil').innerHTML ='Dengan harga awal sebesar ' + hargaAwal + ' dan diskon sebesar ' + diskon + '% .Maka anda mendapatkan potongan harga sebesar ' + potonganHarga + '. Dan anda hanya membayar sebesar ' + hargaAkhir;
     }
 
-    hargaDiskon(harga, diskon);
+    hargaDiskon(harga, diskon); 
 });
 
 
