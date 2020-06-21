@@ -12,30 +12,33 @@
 
     <body>
         <div class="container">
-            <div class="form-box">
+            <div class="card">
+                <div class="form-box">
 
-                <h1>Berapa Sih Harganya?</h1>
-                <form id="formDiskon">
-                    <div class="formSection">
-                        <label class="labelForm"> Harga</label>
-                        <input class="inputForm" type="number" id="harga" />
+                    <h1>Berapa Sih Harganya?</h1>
+                    <form id="formDiskon">
+                        <div class="formSection">
+                            <label class="labelForm"> Harga</label>
+                            <input class="inputForm" type="number" id="harga" />
+                        </div>
+                        <div class="formSection">
+                            <label class="labelForm"> Diskon</label>
+                            <input class="inputForm" type="number" maxlength="3" id="diskon"/>
+                        </div>
+                        <div class="formSection">
+                            <button id="submitBtn" type="button">Hitung Harga </button>
+                        </div>
+                    </form>
+                    <div id="hasil">
+                        <p>Harga Awal: <span class="hasil-input" id="harga-awal"></span></p>
+                        <p>Diskon: <span class="hasil-input" id="jumlah-diskon"></span></p>
+                        <p>Potongan Harga: <span class="hasil-input" id="potongan-harga"></span></p>
+                        <p>Harga Akhir: <span class="hasil-input" id="harga-akhir"></span></p>
                     </div>
-                    <div class="formSection">
-                        <label class="labelForm"> Diskon</label>
-                        <input class="inputForm" type="number" maxlength="3" id="diskon"/>
-                    </div>
-                    <div class="formSection">
-                        <button id="submitBtn" type="button">Hitung Harga </button>
-                    </div>
-                </form>
-                <div id="hasil">
-                    <p>Harga Awal: <span class="hasil-input" id="harga-awal"></span></p>
-                    <p>Diskon: <span class="hasil-input" id="jumlah-diskon"></span></p>
-                    <p>Potongan Harga: <span class="hasil-input" id="potongan-harga"></span></p>
-                    <p>Harga Akhir: <span class="hasil-input" id="harga-akhir"></span></p>
+    
                 </div>
-
             </div>
+            
         </div>
     </body>
     <script src="diskon.js"></script>
