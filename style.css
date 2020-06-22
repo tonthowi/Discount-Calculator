@@ -114,15 +114,6 @@ input[type=number]::-webkit-outer-spin-button {
 /* Responsive */
 @media only screen and (max-width: 600px) {
 
-  /* Hover for touchscreen */
-  @media(hover: hover) and (pointer: fine) {
-    .btn-primary:hover {
-      background-color: #ffb618;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    }
-  }
-
   .container {
     width: 100%;
   }
