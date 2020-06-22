@@ -16,16 +16,6 @@ body {
   height: 100%;
 }
 
-footer {
-  font-size: 0.75em;
-  text-transform: uppercase;
-  width: max-content;
-  display:inline;
-  position: absolute;
-  bottom: 10%;
-  left:50%;
-  transform: translate(-50%, -10%);
-}
 
 .card {
   transform: translate(-50%, -50%);
@@ -65,6 +55,34 @@ h1 {
   display: block;
 }
 
+/* Button Primary */
+.btn-primary,
+.btn-primary:visited {
+  background-color: #e69f07;
+  color: #ffffff;
+  font-weight: 700;
+  width: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.btn-primary:hover {
+  background-color: #ffb618;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:active {
+  background-color: #c78a05;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
 
 @keyframes fadeIn {
   0% {
@@ -95,6 +113,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Responsive */
 @media only screen and (max-width: 600px) {
+
+  /* Hover for touchscreen */
+  @media(hover: hover) and (pointer: fine) {
+    .btn-primary:hover {
+      background-color: #ffb618;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
 
   .container {
     width: 100%;
