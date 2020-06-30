@@ -1,0 +1,137 @@
+$color-primary: #ffb618;
+$color-primary-light: lighten(#ffb618 ,5%);
+$color-primary-dark: darken(#ffb618 ,15%);
+
+$box-shadow-low-elevated: 0 4px 8px rgba(0, 0, 0, 0.1) ;
+$box-shadow-high-elevated: 0 10px 15px rgba(0, 0, 0, 0.2);
+$box-shadow-card: 10px 23px 45px -3px rgba(0,0,0,0.25);
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding: 40px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+  
+  .container {
+    height: 100%;
+
+    .card {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top:50%;
+        left:50%;
+        backface-visibility: hidden;
+
+        .form-box {  
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: $box-shadow-card;                 
+            animation: fadeIn 0.5s ease-out;
+
+            h1 {
+                display: block;
+                font-size: 40px;
+                text-align: center;
+            }
+              
+            .formSection {
+            margin-bottom: 20px;
+
+                .labelForm {
+                    display: block;
+                }
+            }
+        }
+    }     
+  }
+
+  
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+  }
+
+  /* Button Primary */
+  .btn-primary,
+  .btn-primary:visited {
+    background-color: $color-primary;
+    color: #ffffff;
+    font-weight: 700;
+    width: 100%;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    box-shadow: $box-shadow-low-elevated;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        background-color: $color-primary-light;
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-high-elevated;
+    }
+      
+    &:active {
+    background-color: $color-primary-dark;
+    transform: translateY(0);
+    box-shadow:none;
+    }
+  }
+  
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 100;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Responsive */
+  @media only screen and (max-width: 600px) {
+  
+    .container {
+      width: 100%;
+
+      .card {
+        width: 100%;
+        top:40%;
+        left:50%;
+
+        .form-box {
+            box-shadow: none;
+            border-radius: 0%;
+          }
+        
+        h1 {
+        padding-bottom: 1rem;
+        line-height: 1.2;
+        text-align: left;
+        }
+      }
+    }
+
+  }
