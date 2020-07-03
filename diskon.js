@@ -23,7 +23,7 @@ function hargaDiskon(harga, diskon) {
     } else {
 
         document.getElementById("harga-awal").innerHTML = 'Belum memasukkan harga';
-
+        document.getElementById("harga-akhir").innerHTML = 'IDR -';
     }
 
     // Condition without input diskon

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="style.css">
         <title>Discount Calculator</title>
@@ -15,25 +15,31 @@
             <section class="card">
                 <div class="form-box">
 
-                    <h1>Saya bayar berapa?</h1>
+                    <div class="titleBox">
+                        <h1>Saya bayar berapa?</h1>
+                        <span> Version 1.0</span>
+                    </div>
                     <form id="formDiskon">
                         <div class="formSection">
-                            <label class="labelForm"> Harga</label>
-                            <input class="inputForm" type="number" id="harga" />
+                            <input class="inputForm" type="number" id="harga" required/>
+                            <label class="labelForm">Harga</label>
                         </div>
-                        <div class="formSection">
-                            <label class="labelForm"> Diskon</label>
-                            <input class="inputForm" type="number" maxlength="3" id="diskon"/>
+                        <div class="formSection">                    
+                            <input class="inputForm" type="number" maxlength="3" id="diskon" required/>
+                            <label class="labelForm">Diskon</label>
                         </div>
                         <div class="formSection">
                             <button id="submitBtn" class="btn-primary" type="button">Hitung Harga </button>
                         </div>
                     </form>
                     <div id="hasil">
+                        <div class="hargaAkhirBox">
+                            <h3>Saya bayar</h3>
+                            <span class="hasil-input" id="harga-akhir"></span>
+                        </div>
                         <p>Harga Awal: <span class="hasil-input" id="harga-awal"></span></p>
                         <p>Diskon: <span class="hasil-input" id="jumlah-diskon"></span></p>
                         <p>Potongan Harga: <span class="hasil-input" id="potongan-harga"></span></p>
-                        <p>Harga Akhir: <span class="hasil-input" id="harga-akhir"></span></p>
                     </div>
     
                 </div>
