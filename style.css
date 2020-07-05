@@ -18,13 +18,14 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    width: 375px; }
     .container .card .titleBox {
       position: relative;
-      margin-bottom: 23px; }
+      margin-bottom: 15px; }
       .container .card .titleBox h1 {
         display: block;
-        font-size: 40px;
+        font-size: 30px;
         text-align: center; }
       .container .card .titleBox span {
         display: block;
@@ -32,7 +33,7 @@ body {
         font-size: 0.75rem;
         text-transform: uppercase; }
     .container .card .form-box {
-      padding: 40px;
+      padding: 30px;
       border-radius: 30px;
       box-shadow: 10px 23px 45px -3px rgba(0, 0, 0, 0.1);
       animation: fadeIn 0.5s ease-out; }
@@ -46,7 +47,8 @@ body {
           width: 100%; }
           .container .card .form-box .formSection .inputForm:focus {
             outline: none; }
-          .container .card .form-box .formSection .inputForm:focus + .labelForm, .container .card .form-box .formSection .inputForm:valid + .labelForm {
+          .container .card .form-box .formSection .inputForm:focus + .labelForm,
+          .container .card .form-box .formSection .inputForm:valid + .labelForm {
             top: -10px;
             font-size: 12px;
             color: #5264AE; }
@@ -71,18 +73,35 @@ body {
   -moz-appearance: textfield; }
 
 /* Hasil */
-#hasil .hargaAkhirBox {
-  position: relative;
-  margin-top: 50px;
-  margin-bottom: 10px; }
-  #hasil .hargaAkhirBox h3 {
-    display: block;
-    text-align: center; }
-  #hasil .hargaAkhirBox #harga-akhir {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center; }
+.hasil {
+  display: block;
+  position: relative; }
+  .hasil .hargaAkhirBox {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 10px; }
+    .hasil .hargaAkhirBox h3 {
+      display: block;
+      text-align: center; }
+    .hasil .hargaAkhirBox #harga-akhir {
+      display: block;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700; }
+  .hasil ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    display: block; }
+    .hasil ul li .title-input {
+      padding: 5px 10px;
+      background-color: #f3f4f7;
+      border-radius: 4px;
+      font-size: .5rem;
+      font-weight: 600;
+      text-transform: uppercase; }
+    .hasil ul li .hasil-input {
+      font-size: .75rem;
+      text-transform: uppercase; }
 
 /* Button Primary */
 .btn-primary,

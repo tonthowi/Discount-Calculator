@@ -1,6 +1,8 @@
 $color-primary: #ffb618;
 $color-primary-light: lighten(#ffb618 ,5%);
 $color-primary-dark: darken(#ffb618 ,15%);
+$color-secondary: #f3f4f7;
+$color-white: #ffffff;
 
 $box-shadow-low-elevated: 0 4px 8px rgba(0, 0, 0, 0.1) ;
 $box-shadow-high-elevated: 0 10px 15px rgba(0, 0, 0, 0.2);
@@ -31,14 +33,15 @@ $box-shadow-card: 10px 23px 45px -3px rgba(0,0,0,0.1);
         top:50%;
         left:50%;
         backface-visibility: hidden;
+        width: 375px;
 
         .titleBox {
           position: relative;
-          margin-bottom: 23px;
+          margin-bottom: 15px;
 
           h1 {
             display: block;
-            font-size: 40px;
+            font-size: 30px;
             text-align: center;
           }
 
@@ -51,7 +54,7 @@ $box-shadow-card: 10px 23px 45px -3px rgba(0,0,0,0.1);
         }
 
         .form-box {  
-            padding: 40px;
+            padding: 30px;
             border-radius: 30px;
             box-shadow: $box-shadow-card;                 
             animation: fadeIn 0.5s ease-out;
@@ -70,7 +73,8 @@ $box-shadow-card: 10px 23px 45px -3px rgba(0,0,0,0.1);
                 outline:none;
               }
             
-              &:focus + .labelForm,&:valid + .labelForm {
+              &:focus + .labelForm,
+              &:valid + .labelForm {
                 top: -10px;
                 font-size: 12px;
                 color:#5264AE;
@@ -107,7 +111,9 @@ $box-shadow-card: 10px 23px 45px -3px rgba(0,0,0,0.1);
 
 /* Hasil */
 
-#hasil {
+.hasil {
+  display: block;
+  position: relative;
 
   .hargaAkhirBox {
     position: relative;
@@ -121,10 +127,34 @@ $box-shadow-card: 10px 23px 45px -3px rgba(0,0,0,0.1);
 
     #harga-akhir {
       display: block;
+      text-align: center;
       font-size: 2rem;
       font-weight: 700;
-      text-align: center;
     }
+  }
+
+  ul {
+
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+      display: block;
+
+      .title-input {
+        padding: 5px 10px;
+        background-color: $color-secondary;
+        border-radius: 4px;
+        font-size: .5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .hasil-input {
+        font-size: .75rem;
+        text-transform: uppercase;
+      }
+    }
+
   }
 
 }
